@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo | Log in</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+
     <!-- tailwind and daisy ui Cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -41,17 +43,18 @@
 
 
                     <label class="label text-black font-semibold">Mobile Number</label>
-                    <input type="tel" maxlength="11" minlength="11" class="input bg-base-200 rounded-full my-2" placeholder="Enter your number"/>
+                    <input id="mobile-number" type="tel" maxlength="11" minlength="11" class="input bg-base-200 rounded-full my-2" placeholder="Enter your number"/>
 
                     <label class="label text-black font-semibold">4 Digit Pin</label>
-                    <input type="password" class="input bg-base-200 rounded-full mt-2" maxlength="4" placeholder="Password"/>
+                    <input id="pin-number" type="password" class="input bg-base-200 rounded-full mt-2" maxlength="4" placeholder="Enter 4 Digit Pin"/>
 
-                    <button class="btn btn-primary mt-2 rounded-full">Login</button>
+                    <button id="login-btn" class="btn btn-primary mt-2 rounded-full">Login</button>
                 </fieldset>
 
             </div>
         </div>
     </div>
+    <script src="./javascript/login.js"></script>
 </body>
 
 </html>
