@@ -13,6 +13,7 @@ function showOn(id)
     document.getElementById('cashout-bar').classList.add('hidden');
     document.getElementById('sendmoney-bar').classList.add('hidden');
     document.getElementById('getbonus-bar').classList.add('hidden');
+    document.getElementById('paybill-bar').classList.add('hidden');
 
     document.getElementById(id).classList.remove('hidden');
 }

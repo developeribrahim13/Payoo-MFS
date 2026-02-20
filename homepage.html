@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo | Log in</title>
+    <title>Payoo MFS</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
 
     <!-- tailwind and daisy ui Cdn -->
@@ -79,7 +79,7 @@
                             <p class="text-[#080808]/50 font-semibold">Get Bonus</p>
                         </button>
 
-                        <button class="btn flex-col h-full py-4 px-6 rounded-xl bg-primary/10 focus:bg-indigo-200">
+                        <button onclick="showOn('paybill-bar')" class="btn flex-col h-full py-4 px-6 rounded-xl bg-primary/10 focus:bg-indigo-200">
                             <img src="./assets/opt-5.png">
                             <p class="text-[#080808]/50 font-semibold">Pay Bill</p>
                         </button>
@@ -93,7 +93,7 @@
 
                 <!-- add money section start -->
                  <section id="add-money-bar" class="flex flex-col justify-center items-center hidden">
-                    <div class="w-11/12 my-5 text-lg font-semibold text-[#080808]/90">
+                    <div class="w-11/12 my-3 text-lg font-semibold text-[#080808]/90">
                         <h2>Add Money</h2>
                     </div>
 
@@ -157,7 +157,7 @@
                 <!-- send money section start -->
                 <section id="sendmoney-bar" class="flex flex-col justify-center items-center hidden">
                     <div class="w-11/12 my-5 text-lg font-semibold text-[#080808]/90">
-                        <h2>Send Money</h2>
+                        <h2>Transfer Money</h2>
                     </div>
 
                     <fieldset class="fieldset bg-white border-base-300 rounded-3xl w-11/12 border p-6">
@@ -197,6 +197,42 @@
                     </fieldset>
                 </section>
                   <!-- get bonus section end -->
+
+                  <!-- pay bill section start-->
+                   <section id="paybill-bar" class="flex flex-col justify-center items-center hidden">
+                    <div class="w-11/12 my-3 text-lg font-semibold text-[#080808]/90">
+                        <h2>Pay Bill</h2>
+                    </div>
+
+                    <fieldset class="fieldset bg-white border-base-300 rounded-3xl w-11/12 border p-6">
+
+                        <label class=" text-[#080808]/70 font-semibold text-sm">Select A Bank</label>
+                        <select id="paybill-bank" class="bg-base-200 rounded-full my-2 w-full border-gray-300 py-2 text-[#080808]/50 text-sm px-2">
+                            <option disabled selected>Select a bank</option>
+                            <option>IBBL</option>
+                            <option>DBBL</option>
+                            <option>City Bank</option>
+                        </select>
+                        
+
+
+                        <label class=" text-[#080808]/70 font-semibold text-sm">Bank Account Number</label>
+                        <input id="biller-account-number" type="tel" maxlength="11" minlength="11"
+                            class="input bg-base-200 rounded-full my-2 w-full"
+                            placeholder="Enter Account Number" />
+
+                        <label class=" text-[#080808]/70 font-semibold text-sm">Amount</label>
+                        <input id="pay-amount" type="number" 
+                            class="input bg-base-200 rounded-full my-2 w-full" placeholder="Enter Amount to Pay" />
+
+                        <label class=" text-[#080808]/70 font-semibold text-sm">Pin Number</label>
+                        <input id="paybill-pin" type="password" class="input bg-base-200 rounded-full mt-2 w-full"
+                            maxlength="4" placeholder="Enter 4 Digit Pin" />
+
+                        <button id="paybill-btn" class="btn btn-primary mt-2 rounded-full">pay Now</button>
+                    </fieldset>
+                </section>
+                   <!-- pay bill section end -->
 
                 <!-- main section end -->
             </div>
