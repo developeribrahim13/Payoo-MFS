@@ -30,11 +30,22 @@ document.getElementById('paybill-btn').addEventListener('click', function(event)
         return;
     }
     const Amount = document.getElementById('amount').innerText;
-    const newBallance = parseFloat(Amount) + parseFloat(paybillAmount);
+    const newBallance = parseFloat(Amount) - parseFloat(paybillAmount);
+
+        if(newBallance>=0)
+    {
     document.getElementById('amount').innerText = newBallance;
       alert(`congratulations! You have successfully payed $${paybillAmount} to ${paybillBank}. New Ballance is: $${newBallance}`);
-    document.getElementById('paybill-bank').value = 'Select a bank';
-        clear('biller-account-number');
-        clear('pay-amount');
-        clear('paybill-pin');
+        clear('cashout-agent-number');
+        clear('cashout-amount');
+        clear('cashout-pin');
+        return;
+    }
+    else{
+        alert('you dont have enough ballance');
+        clear('cashout-agent-number');
+        clear('cashout-amount');
+        clear('cashout-pin');
+        return;
+    }
 });
