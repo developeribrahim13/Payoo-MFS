@@ -8,7 +8,7 @@ document.getElementById('login-btn')
         {
             alert("welcome to the Home Page");
             // window.location.href="/homepage.html"; eivabew lekha jay
-            window.location.replace("/homepage.html");
+            window.location.replace("homepage.html");
         }
         else
         {
